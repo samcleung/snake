@@ -8,15 +8,16 @@ import './ComponentA.scss'
 class ComponentA extends React.Component { // ComponentA is the child of the React.Component class
     constructor(props) { // props stands for properties
         super(props); // Sends parent constructor props
-        // The state of a component represents its variable parts; for example, sub-titles or scores
-        // With states, components are able to communicate with each other:
-        //    When a state changes, all components that contain an instance of that state have to update that instance (REACT, if you will)
+        /* The state of a component represents its variable parts; for example, sub-titles or scores
+        With states, components are able to communicate with each other:
+            When a state changes, all components that contain an instance of that state have to update that instance (REACT, if you will) */
         this.state = {
-            display: 'Hello World!', // We can access this prperty later on in the render function!
-                                     // Note: never directly mutate a component's state like:
-                                     //    this.state.display = 'Goodbye World!';
-                                     // Instead, to change state, refer to the clickHandler event handler
+            display: 'Hello World!',
             toggle: true
+            // We can access theses properties later on in the render function!
+            /* Note: never directly mutate a component's state like:
+                this.state.display = 'Goodbye World!';
+            Instead, to change state, refer to the clickHandler event handler */
         }
 
         let state2 = Object.assign({}, this.state); // Make a copy of the original state with Object.assign which assigns the properties of this.state to an empty object state2
