@@ -3,7 +3,7 @@
 
 import React from 'react'
 import ComponentB from './ComponentB'
-import './ComponentA.scss'
+import './ComponentA.css'
 
 class ComponentA extends React.Component { // ComponentA is the child of the React.Component class
     constructor(props) { // props stands for properties
@@ -22,7 +22,7 @@ class ComponentA extends React.Component { // ComponentA is the child of the Rea
 
         let state2 = Object.assign({}, this.state); // Make a copy of the original state with Object.assign which assigns the properties of this.state to an empty object state2
         state2.display = 'Goodbye World!'; // Now directly manipulate the properties of newState
-        this.setState(newState); // Now set our current state to be newState
+        this.setState(state2); // Now set our current state to be newState
 
         // Without this line, the button we render will not work!
         // We must bind the handler to the current class/component, and now we access the handler through the 'this' pointer
